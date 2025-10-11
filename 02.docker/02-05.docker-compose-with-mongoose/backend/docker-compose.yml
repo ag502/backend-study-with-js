@@ -1,0 +1,21 @@
+version: '3.7'
+
+# Docker 컴퓨터들
+services:
+
+  backend:
+    build:
+      # docker 파일의 경로
+      context: .
+      # docker 파일의 이름
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+
+  database:
+    image: mongo:5
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile.mongo
+    ports:
+      - 27017:27017
