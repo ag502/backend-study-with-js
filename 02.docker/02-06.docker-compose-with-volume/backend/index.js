@@ -28,7 +28,7 @@ app.get("/board", async function (req, res) {
 app.post("/board", async function (req, res) {
     // 1. 브라우저에서 보내준 데이터 확인하기
     console.log(req);
-    console.log("===============> POST");
+    console.log("===============");
     console.log(req.body);
     
 
@@ -59,8 +59,6 @@ app.post("/tokens/phone", function (req, res) {
 
     res.send("인증완료!!!");
 });
-
-mongoose.set("debug", true);
 
 mongoose.connect("mongodb://database:27017/mydocker")
     .then(() => console.log("MongoDB Connected"))

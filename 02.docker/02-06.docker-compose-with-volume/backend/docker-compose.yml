@@ -9,10 +9,6 @@ services:
       context: .
       # docker 파일의 이름
       dockerfile: Dockerfile
-    # 현재 파일과 docker 내부의 파일을 연결
-    volumes:
-      - ./index.js:/myfolder/index.js
-      # - ./src:/myfolder/src
     ports:
       - 4000:4000
 
